@@ -362,13 +362,15 @@
       border-radius: 5px;
     }
 
+    /* Ilustración Vectorial Esquina Superior Derecha (Ajustada) */
     .decor-corner-top-right {
       position: absolute;
-      top: -5px;
-      right: -5px;
-      width: 250px;
-      height: 250px;
+      top: -15px;
+      right: -15px;
+      width: 180px;  /* Antes 250px: ahora se mantiene en la esquina sin tapar "Omar" */
+      height: 180px;
       pointer-events: none;
+      opacity: 0.85; /* Ligeramente más suave para dar protagonismo al texto */
     }
 
     .decor-corner-bottom-left {
@@ -426,12 +428,18 @@
 
     .couple-names {
       font-family: 'Pinyon Script', cursive;
-      font-size: 3.6rem;
+      font-size: 3.4rem;
       color: var(--text-dark);
       text-align: center;
       line-height: 1.1;
-      margin-top: 8px;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+      margin-top: 10px;
+      /* Halo perimetral en el color del fondo que despeja cualquier rama detrás */
+      text-shadow: 
+        2px 2px 0px #fcf9f6,
+       -2px -2px 0px #fcf9f6,
+        2px -2px 0px #fcf9f6,
+       -2px 2px 0px #fcf9f6,
+        0px 0px 10px #fcf9f6;
     }
 
     .divider-gold {
@@ -485,6 +493,13 @@
       color: var(--text-dark);
       line-height: 1.6;
       margin-bottom: 8px;
+      /* Halo de contraste en el color del fondo */
+      text-shadow: 
+        1px 1px 0px #fcf9f6,
+       -1px -1px 0px #fcf9f6,
+        1px -1px 0px #fcf9f6,
+       -1px 1px 0px #fcf9f6,
+        0px 0px 8px #fcf9f6;
     }
 
     .invite-action {
@@ -494,6 +509,11 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       display: block;
+      /* Halo de contraste */
+      text-shadow: 
+        1px 1px 0px #fcf9f6,
+       -1px -1px 0px #fcf9f6,
+        0px 0px 6px #fcf9f6;
     }
 
     .timer-card {
